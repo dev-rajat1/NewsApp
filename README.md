@@ -61,7 +61,7 @@ News API (https://newsapi.org/)
 
 REST API with JSON response
 
-
+---
 
 ## 🚧 Future Improvements
 
