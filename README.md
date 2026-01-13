@@ -1,4 +1,4 @@
-## NEWSAPP 
+## News App (Retrofit) 
 An Android News Application developed using Kotlin that fetches real-time news data from a public API and displays the latest headlines in a clean UI.
 
 ---
