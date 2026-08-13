@@ -16,10 +16,14 @@ class SaveVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        applyVibrantGradientBackground()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
     }
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)

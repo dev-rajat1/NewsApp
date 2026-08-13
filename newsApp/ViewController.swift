@@ -30,16 +30,34 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        applyVibrantGradientBackground()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
-        
-        
+        tableView.backgroundColor = .clear
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = .clear
         
         searchBar.delegate = self
+        searchBar.searchBarStyle = .minimal
+        searchBar.backgroundColor = .clear
+        
+        if let textField = searchBar.value(forKey: "searchField") as? UITextField {
+            textField.textColor = .black
+            textField.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+            textField.layer.cornerRadius = 10
+            textField.clipsToBounds = true
+            
+            let placeholderAttr = NSAttributedString(string: "Search News...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+            textField.attributedPlaceholder = placeholderAttr
+            
+            if let leftIcon = textField.leftView as? UIImageView {
+                leftIcon.tintColor = .darkGray
+            }
+        }
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .horizontal

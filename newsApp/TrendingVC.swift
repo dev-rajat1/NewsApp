@@ -16,9 +16,12 @@ class TrendingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        applyVibrantGradientBackground()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         
         setupSpinner()
         showSpinner()

@@ -6,6 +6,29 @@ class SavedNewsManager {
 
     private let key = "savedNews"
 
+    func isSaved(_ news: News) -> Bool {
+        let saved = getSavedNews()
+        return saved.contains(where: { $0.title == news.title })
+    }
+    
+    @discardableResult
+    func toggleSave(_ news: News) -> Bool {
+        var saved = getSavedNews()
+        if let index = saved.firstIndex(where: { $0.title == news.title }) {
+            saved.remove(at: index)
+            if let data = try? JSONEncoder().encode(saved) {
+                UserDefaults.standard.set(data, forKey: key)
+            }
+            return false // Now unsaved
+        } else {
+            saved.insert(news, at: 0)
+            if let data = try? JSONEncoder().encode(saved) {
+                UserDefaults.standard.set(data, forKey: key)
+            }
+            return true // Now saved
+        }
+    }
+
     func saveNews(_ news: News) -> Bool {
 
         var saved = getSavedNews()

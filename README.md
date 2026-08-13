@@ -11,6 +11,14 @@ A native iOS application built with **Swift** and **UIKit** that allows users to
 *   **Save Articles (Bookmarks):** Save your favorite articles locally to read them later, even offline.
 *   **In-App Web View:** Read full articles directly within the app using `WKWebView`.
 
+### 🚀 Future Enhancements (Coming Soon)
+*   **Dark Mode Support:** A sleek, fully optimized dark theme for comfortable night-time reading.
+*   **Offline Caching:** Store full articles using CoreData to allow complete offline reading without internet.
+*   **Personalized News Feed:** Users can select favorite topics and get a customized "For You" feed.
+*   **Push Notifications:** Receive instant alerts for breaking news and major global events.
+*   **Social Sharing:** Easily share interesting articles with friends via WhatsApp, Twitter, and native iOS share sheet.
+*   **Text-to-Speech:** A built-in audio player to listen to the news articles on the go.
+
 ## Tech Stack 🛠️
 
 *   **Language:** Swift

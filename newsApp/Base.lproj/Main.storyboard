@@ -279,56 +279,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aul-yP-UeS">
-                                                <rect key="frame" x="20" y="115.5" width="374" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" systemColor="systemGrayColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvb-Ti-Nib">
-                                                <rect key="frame" x="20" y="145" width="374" height="19.5"/>
+                                                <rect key="frame" x="20" y="125.5" width="374" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H3-pv-XCi">
-                                                <rect key="frame" x="10" y="369" width="112" height="30"/>
-                                                <state key="normal" title="Read Full Article"/>
-                                                <connections>
-                                                    <action selector="seeMoreButtonTapped:" destination="rgB-s9-uaC" eventType="touchUpInside" id="PbH-KT-p5A"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4Z-NU-UYg">
-                                                <rect key="frame" x="317" y="369" width="87" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Add to Save">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveButtonTapped:" destination="rgB-s9-uaC" eventType="touchUpInside" id="EeO-YC-fva"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="h4Z-NU-UYg" secondAttribute="trailing" constant="10" id="2at-B6-bap"/>
-                                            <constraint firstAttribute="bottom" secondItem="1H3-pv-XCi" secondAttribute="bottom" constant="5" id="7Pi-gJ-hlC"/>
-                                            <constraint firstItem="1H3-pv-XCi" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="10" id="WMH-yk-k4t"/>
+                                            <constraint firstItem="Mvb-Ti-Nib" firstAttribute="top" secondItem="FFr-G4-znM" secondAttribute="bottom" constant="20" id="348-X6-amw"/>
                                             <constraint firstItem="MNL-la-nD9" firstAttribute="top" secondItem="KOW-17-7mG" secondAttribute="bottom" constant="10" id="Xp0-o3-X1e"/>
-                                            <constraint firstItem="Aul-yP-UeS" firstAttribute="top" secondItem="FFr-G4-znM" secondAttribute="bottom" constant="10" id="ZEK-K6-JSN"/>
                                             <constraint firstItem="KOW-17-7mG" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="20" id="dJK-qz-ElP"/>
-                                            <constraint firstAttribute="bottom" secondItem="h4Z-NU-UYg" secondAttribute="bottom" constant="5" id="eMf-nB-mlB"/>
                                             <constraint firstItem="MNL-la-nD9" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="20" id="eqq-gl-obZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="Aul-yP-UeS" secondAttribute="trailing" constant="20" id="h7i-dS-Tlh"/>
-                                            <constraint firstItem="Aul-yP-UeS" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="20" id="hIe-nT-ROF"/>
                                             <constraint firstAttribute="trailing" secondItem="MNL-la-nD9" secondAttribute="trailing" constant="20" id="iTE-w7-8aK"/>
                                             <constraint firstItem="FFr-G4-znM" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="20" id="mCj-Uw-WgI"/>
                                             <constraint firstAttribute="trailing" secondItem="Mvb-Ti-Nib" secondAttribute="trailing" constant="20" id="ne3-ui-PCV"/>
                                             <constraint firstAttribute="trailing" secondItem="KOW-17-7mG" secondAttribute="trailing" constant="20" id="oeS-9Y-aRs"/>
                                             <constraint firstItem="FFr-G4-znM" firstAttribute="top" secondItem="MNL-la-nD9" secondAttribute="bottom" constant="10" id="qSY-ZS-mEQ"/>
                                             <constraint firstItem="KOW-17-7mG" firstAttribute="top" secondItem="W1w-yT-c65" secondAttribute="top" id="r7d-tV-N71"/>
-                                            <constraint firstItem="Mvb-Ti-Nib" firstAttribute="top" secondItem="Aul-yP-UeS" secondAttribute="bottom" constant="10" id="ukj-t3-hcZ"/>
                                             <constraint firstItem="Mvb-Ti-Nib" firstAttribute="leading" secondItem="W1w-yT-c65" secondAttribute="leading" constant="20" id="wrc-im-jeZ"/>
                                         </constraints>
                                     </view>
@@ -348,7 +317,6 @@
                         <outlet property="authorLabel" destination="FFr-G4-znM" id="om0-SF-LnE"/>
                         <outlet property="contentLabel" destination="Mvb-Ti-Nib" id="sqw-U2-xW3"/>
                         <outlet property="dateLabel" destination="fcO-3J-ing" id="MAF-dL-eSP"/>
-                        <outlet property="descriptionLabel" destination="Aul-yP-UeS" id="vvn-6S-ga1"/>
                         <outlet property="newsImageView" destination="tNS-9M-RRW" id="Np6-Px-vWV"/>
                         <outlet property="sourceLabel" destination="n4x-1s-C0c" id="pNl-gP-EGY"/>
                         <outlet property="titleLabel" destination="MNL-la-nD9" id="DTf-8n-CfD"/>
@@ -718,9 +686,6 @@
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
