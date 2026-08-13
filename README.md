@@ -44,7 +44,7 @@ A native iOS application built with **Swift** and **UIKit** that allows users to
     Open `newsApp.xcodeproj` in Xcode.
 3.  **API Key Configuration:**
     *   The app uses [NewsAPI](https://newsapi.org/).
-    *   *Note:* A default API key is currently included in `APIService.swift` for demonstration purposes. For production, please replace it with your own API key.
+    *   Set the `NEWS_API_KEY` environment variable, add `NEWS_API_KEY` to `Info.plist`, or set your key in `APIService.swift`.
 4.  **Run the app:**
     Select a simulator or a physical device and press `Cmd + R` to run the app.
 

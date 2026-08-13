@@ -19,7 +19,7 @@ The app generally follows a standard **MVC (Model-View-Controller)** architectur
   - `getNews(category:page:pageSize:completion:)`: Fetches news by category with pagination support.
   - `searchNews(query:completion:)`: Searches for news articles based on a user query.
   - `getTrendingNews(page:pageSize:completion:)`: Fetches top headlines for the trending section.
-  - **API Key**: Currently hardcoded in the URL strings (`cc08825e21ad4f6b9f020d35d4a2fb6c`).
+  - **API Key**: Managed dynamically via `apiKey` property in `APIService` (reads `NEWS_API_KEY` from environment variables, `Info.plist`, or fallback placeholder).
 
 ### Local Storage
 - **`SavedNewsManager.swift`**: A singleton class managing locally saved articles using `UserDefaults`. Uses `JSONEncoder` and `JSONDecoder` to store and retrieve arrays of `News` objects.
@@ -45,7 +45,7 @@ The app generally follows a standard **MVC (Model-View-Controller)** architectur
 
 ## 5. Potential Improvements / AI Actionable Items
 If an AI agent is working on this codebase, the following are standard recommendations and areas for improvement:
-- **API Key Security**: The API key is hardcoded in `APIService.swift`. It should be moved to a configuration file or environment variable.
+- **API Key Security**: The API key is now moved out of hardcoded URLs into a configurable variable (`apiKey`), loaded from environment variables or `Info.plist`.
 - **Dependency Management**: Check if `SDWebImage` is managed via CocoaPods, Carthage, or Swift Package Manager (SPM). Look for `Podfile` or `Package.swift` in the root if dependency changes are required.
 - **Error Handling**: Network calls in `APIService` print errors to the console but return empty arrays to the UI. Propagating error messages to the UI (e.g., "No Internet Connection") would improve UX.
 - **Code Duplication**: `APIService` has repetitive `URLSession` boilerplate. A generic network request function could refactor this.

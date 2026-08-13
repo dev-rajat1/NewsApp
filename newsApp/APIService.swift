@@ -4,6 +4,18 @@ class APIService {
 
     static let shared = APIService()
     
+    /// News API key loaded from ProcessInfo environment variable `NEWS_API_KEY`,
+    /// Info.plist key `NEWS_API_KEY`, or fallback to placeholder.
+    private var apiKey: String {
+        if let key = ProcessInfo.processInfo.environment["NEWS_API_KEY"], !key.isEmpty {
+            return key
+        }
+        if let key = Bundle.main.object(forInfoDictionaryKey: "NEWS_API_KEY") as? String, !key.isEmpty {
+            return key
+        }
+        return "YOUR_API_KEY_HERE"
+    }
+    
     func getNews(
         category: String,
         page: Int,
@@ -12,7 +24,7 @@ class APIService {
     ) {
 
         let urlString =
-        "https://newsapi.org/v2/top-headlines?country=us&category=\(category)&page=\(page)&pageSize=\(pageSize)&apiKey=cc08825e21ad4f6b9f020d35d4a2fb6c"
+        "https://newsapi.org/v2/top-headlines?country=us&category=\(category)&page=\(page)&pageSize=\(pageSize)&apiKey=\(apiKey)"
 
         guard let url = URL(string: urlString) else { return }
 
@@ -51,7 +63,7 @@ class APIService {
         query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
 
         let urlString =
-        "https://newsapi.org/v2/everything?q=\(encodedQuery)&apiKey=cc08825e21ad4f6b9f020d35d4a2fb6c"
+        "https://newsapi.org/v2/everything?q=\(encodedQuery)&apiKey=\(apiKey)"
 
         guard let url = URL(string: urlString) else {
             completion([])
@@ -95,7 +107,7 @@ class APIService {
     ) {
 
         let urlString =
-        "https://newsapi.org/v2/top-headlines?country=us&page=\(page)&pageSize=\(pageSize)&apiKey=cc08825e21ad4f6b9f020d35d4a2fb6c"
+        "https://newsapi.org/v2/top-headlines?country=us&page=\(page)&pageSize=\(pageSize)&apiKey=\(apiKey)"
 
         guard let url = URL(string: urlString) else {
             completion([])
