@@ -40,9 +40,6 @@ A native iOS application built with **Swift** and **UIKit** that allows users to
 4.  **Run the app:**
     Select a simulator or a physical device and press `Cmd + R` to run the app.
 
-## Screenshots 📸
-*(You can add screenshots of your app here later by placing images in the repo and linking them like `![Home Screen](path/to/image.png)`)*
-
 ## Acknowledgements 🙏
 *   Data provided by [NewsAPI.org](https://newsapi.org/)
 
